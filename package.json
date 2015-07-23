@@ -1,0 +1,19 @@
+{
+  "name": "simple-bind",
+  "version": "1.0.0",
+  "description": "Trivially simple one-way data binding for HTML forms",
+  "main": "simple-bind.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rolodato/simple-bind.git"
+  },
+  "author": "Rodrigo López Dato <rlopezdato@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rolodato/simple-bind/issues"
+  },
+  "homepage": "https://github.com/rolodato/simple-bind",
+  "dependencies": {
+    "form-state": "^1.0.0"
+  }
+}
