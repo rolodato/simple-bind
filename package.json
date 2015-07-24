@@ -1,6 +1,6 @@
 {
   "name": "simple-bind",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Trivially simple one-way data binding for HTML forms",
   "main": "simple-bind.js",
   "repository": {
