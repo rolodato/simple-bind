@@ -14,6 +14,12 @@
   },
   "homepage": "https://github.com/rolodato/simple-bind",
   "dependencies": {
-    "form-state": "^1.0.0"
+    "form-serialize": "^0.6.0"
+  },
+  "devDependencies": {
+    "browserify": "^11.0.0"
+  },
+  "scripts": {
+    "test": "browserify simple-bind.js test/test.js > test/bundle.js"
   }
 }

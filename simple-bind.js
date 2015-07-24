@@ -1,4 +1,4 @@
-var formState = require("form-state");
+var serialize = require("form-serialize");
 
 function makeArray (obj) {
   return Object.keys(obj).map(function (key) {
@@ -6,23 +6,18 @@ function makeArray (obj) {
   });
 }
 
-function inputEvent (field) {
-  if (field.type === "radio") {
-    return "click";
-  } else {
-    return "input";
-  }
-}
-
 function bindInput (field, handler) {
-  field.addEventListener(inputEvent(field), handler);
+  var inputEvents = ["change", "input"];
+  inputEvents.forEach(function (e) {
+    field.addEventListener(e, handler);
+  })
 }
 
 module.exports = function bindForm (form, handler) {
-  var fields = makeArray(form.querySelectorAll("input, textarea"));
+  var fields = makeArray(form.querySelectorAll("input, textarea, select"));
   fields.forEach(function (field) {
     bindInput(field, function () {
-      handler(formState(form));
+      handler(serialize(form, { hash: true }));
     });
   });
 };
